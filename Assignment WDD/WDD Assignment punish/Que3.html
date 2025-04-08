@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Dropdown Nav</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: gray;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+      display: flex;
+    }
+
+    .nav-link:hover {
+      background-color: black;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 150px;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .dropdown a {
+      color: white;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: lightblue;
+    }
+
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="nav-item">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Destinations</a>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Travel Tips</a>
+      <div class="dropdown">
+        <a href="#">Packing Guide</a>
+        <a href="#">Budget Travel</a>
+        <a href="#">Solo Travel</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Blog</a>
+      <div class="dropdown">
+        <a href="#">Adventure</a>
+        <a href="#">Culture</a>
+        <a href="#">Food</a>
+
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+</body>
+</html>
